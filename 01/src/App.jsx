@@ -11,8 +11,18 @@ export default function App() {
 
 	useGSAP(
 		() => {
-			gsap.to(box.current, { rotation: '+=360', duration: 3 });
-			gsap.to(circle.current, { rotation: '-=360', duration: 3 });
+			gsap.to(box.current, {
+				rotation: '+=360',
+				duration: 3,
+				repeat: -1,
+				ease: 'linear',
+			});
+			gsap.to(circle.current, {
+				rotation: '-=360',
+				duration: 3,
+				repeat: -1,
+				ease: 'linear',
+			});
 		},
 		{ scope: container }
 	);
