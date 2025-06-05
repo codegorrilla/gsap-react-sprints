@@ -35,15 +35,17 @@ function App() {
 		return () => clearTimeout(timer);
 	}, [count]);
 
+	const triggerRender = () => {
+		setCount(count + 1);
+	};
+
 	return (
 		<div
 			className='app'
 			ref={app}
 		>
 			<div>
-				<button onClick={() => setCount(count + 1)}>
-					Click to trigger a render
-				</button>
+				<button onClick={triggerRender}>Click to trigger a render</button>
 			</div>
 			<p>Count: {count}</p>
 			<p>Delayed Count: {delayedCount}</p>

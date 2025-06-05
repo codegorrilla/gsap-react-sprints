@@ -24,7 +24,7 @@ export default function App() {
 				ease: 'linear',
 			});
 		},
-		{ scope: container }
+		{ scope: container, revertOnUpdate: true }
 	);
 
 	return (
