@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-export default function app() {
+export default function App() {
 	const container = useRef();
 	const badRef = useRef();
 	const goodRef = useRef();
